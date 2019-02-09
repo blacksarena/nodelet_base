@@ -1,0 +1,10 @@
+<launch>
+	<!-- $ rosrun nodelet nodelet manager __name:=nodelet_base_manager -->
+	<node pkg="nodelet" type="nodelet" args="manager"
+    name="nodelet_base_manager" output="screen" />
+
+	<!-- $ rosrun nodelet nodelet load nodelet_base/NodeletBase nodelet_base_manager __name:=NodeletBase -->
+	<node pkg="nodelet" type="nodelet" args="load nodelet_base/NodeletBase nodelet_base_manager"
+    name="NodeletBase" output="screen">
+	</node>
+</launch>

@@ -31,6 +31,7 @@ void NodeletBase::onInit()
 
 void NodeletBase::callbackMsg(const std_msgs::StringPtr msg)
 {
+    // Be sure to use a pointer for the argument of nodelet's message callback function.
     NODELET_INFO("receive: [%s]", msg->data.c_str());
 }
 
