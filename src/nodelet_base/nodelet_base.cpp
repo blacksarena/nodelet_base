@@ -29,9 +29,9 @@ void NodeletBase::onInit()
     _timer = nh.createTimer(ros::Duration(1.0), &NodeletBase::callbackTimer, this);
 }
 
-void NodeletBase::callbackMsg(const std_msgs::StringPtr msg)
+void NodeletBase::callbackMsg(const std_msgs::StringConstPtr msg)
 {
-    // Be sure to use a pointer for the argument of nodelet's message callback function.
+    // Be sure to use a const-pointer for the argument of nodelet's message callback function.
     NODELET_INFO("receive: [%s]", msg->data.c_str());
 }
 

@@ -21,7 +21,7 @@ namespace nodelet_base
         ros::Subscriber _sub;
         ros::Timer      _timer;
 
-        void callbackMsg(const std_msgs::StringPtr msg);
+        void callbackMsg(const std_msgs::StringConstPtr msg);
         void callbackTimer(const ros::TimerEvent &event);
     };
 }
